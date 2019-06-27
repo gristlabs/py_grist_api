@@ -1,0 +1,14 @@
+language: python
+sudo: false
+
+matrix:
+  include:
+    - python: 2.7
+    - python: 3.5
+    - python: 3.6
+    - python: 3.7
+
+# command to install dependencies
+install: pip install tox-travis
+# command to run tests
+script: tox
