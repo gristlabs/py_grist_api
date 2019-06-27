@@ -10,7 +10,7 @@ function exported by this module.
 
 # pylint: disable=wrong-import-position,wrong-import-order,import-error
 from future import standard_library
-from future.builtins import range
+from future.builtins import range, str
 from future.utils import viewitems
 standard_library.install_aliases()
 
@@ -90,9 +90,10 @@ class GristDocAPI(object):
       })
       if not resp.ok:
         # If the error has {"error": ...} content, use the message in the Python exception.
+        err_msg = None
         try:
           error_obj = resp.json()
-          if error_obj and isinstance(error_obj.get("error"), basestring):
+          if error_obj and isinstance(error_obj.get("error"), str):
             err_msg = error_obj.get("error")
             # TODO: This is a temporary workaround: SQLITE_BUSY shows up in messages for a
             # temporary problem for which it's safe to retry.
@@ -102,7 +103,11 @@ class GristDocAPI(object):
               continue
         except Exception:   # pylint: disable=broad-except
           pass
-        raise resp.raise_for_status()
+
+        if err_msg:
+          raise requests.HTTPError(err_msg, response=resp)
+        else:
+          raise resp.raise_for_status()
       return resp.json()
 
   def fetch_table(self, table_name, filters=None):

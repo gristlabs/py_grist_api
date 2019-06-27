@@ -24,6 +24,7 @@ from datetime import date
 import logging
 import os
 import unittest
+import requests
 from vcr import VCR
 from grist_api import GristDocAPI, date_to_ts
 
@@ -324,3 +325,12 @@ class TestGristDocAPI(unittest.TestCase):
         chunk_size=12)
     data = self._grist_api.fetch_table('Table1')
     self.assert_data(data, initial_data["Table1"])
+
+  @vcr.use_cassette()
+  def test_errors(self):
+    with self.assertRaisesRegexp(requests.HTTPError, "Table not found.*Unicorn"):
+      self._grist_api.fetch_table('Unicorn')
+    with self.assertRaisesRegexp(requests.HTTPError, "ColorBoom"):
+      self._grist_api.fetch_table('Table1', {"ColorRef": 1, "ColorBoom": 2})
+    with self.assertRaisesRegexp(requests.HTTPError, "Invalid column.*NumX"):
+      self._grist_api.add_records('Table1', [{"Text_Field": "Beets", "NumX": 2}])
