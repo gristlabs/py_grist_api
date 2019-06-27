@@ -8,6 +8,10 @@ Dates received from Grist remain as numerical timestamps, and may be converted u
 function exported by this module.
 """
 
+# pylint: disable=wrong-import-position,wrong-import-order,import-error
+from future import standard_library
+standard_library.install_aliases()
+
 import datetime
 import decimal
 import itertools
@@ -16,10 +20,13 @@ import logging
 import os
 import sys
 import time
-import urllib
-import urllib2
 from collections import namedtuple
+from future.builtins import range
+from future.utils import viewitems
 from numbers import Number
+from urllib.parse import quote_plus
+from urllib.request import urlopen, Request
+from urllib.error import HTTPError
 
 # Set environment variable GRIST_LOGLEVEL=DEBUG for more verbosity, WARNING for less.
 log = logging.getLogger('grist_api')
@@ -68,8 +75,8 @@ class GristDocAPI(object):
     """
     if prefix is None:
       prefix = '/api/docs/%s/' % self._doc_id
-    data = json.dumps(json_data) if json_data is not None else None
-    req = urllib2.Request(self._server + prefix + url, data=data, headers={
+    data = json.dumps(json_data).encode('utf8') if json_data is not None else None
+    req = Request(self._server + prefix + url, data=data, headers={
       'Authorization': 'Bearer %s' % self._api_key,
       'Content-Type': 'application/json',
       'Accept': 'application/json',
@@ -86,9 +93,9 @@ class GristDocAPI(object):
           log.info("DRYRUN NOT sending %s request to %s", req.get_method(), dest)
           return None
         log.debug("sending %s request to %s", req.get_method(), dest)
-        resp = urllib2.urlopen(req)
+        resp = urlopen(req)
         break
-      except urllib2.HTTPError as err:
+      except HTTPError as err:
         # If the error has {"error": ...} content, use the message in the Python exception.
         try:
           error_obj = json.loads(err.read())
@@ -116,8 +123,8 @@ class GristDocAPI(object):
     """
     query = ''
     if filters:
-      query = '?filter=' + urllib.quote_plus(json.dumps(
-        {k: [to_grist(v)] for k, v in filters.iteritems()}))
+      query = '?filter=' + quote_plus(json.dumps(
+        {k: [to_grist(v)] for k, v in viewitems(filters)}))
 
     columns = self.call('tables/%s/data%s' % (table_name, query))
     # convert columns to rows
@@ -125,7 +132,7 @@ class GristDocAPI(object):
     count = len(columns['id'])
     values = columns.values()
     log.info("fetch_table %s returned %s rows", table_name, count)
-    return [Record._make(v[i] for v in values) for i in xrange(count)]
+    return [Record._make(v[i] for v in values) for i in range(count)]
 
   def add_records(self, table_name, record_dicts, chunk_size=None):
     """
@@ -325,7 +332,7 @@ def desc_col_values(data):
   of values).
   """
   rows = 0
-  for _, values in data.iteritems():
+  for _, values in viewitems(data):
     rows = len(values)
     break
   return "%s rows, cols (%s)" % (rows, ', '.join(sorted(data.keys())))
