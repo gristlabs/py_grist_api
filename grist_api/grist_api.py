@@ -74,7 +74,7 @@ class GristDocAPI(object):
     """
     if prefix is None:
       prefix = '/api/docs/%s/' % self._doc_id
-    data = json.dumps(json_data).encode('utf8') if json_data is not None else None
+    data = json.dumps(json_data, sort_keys=True).encode('utf8') if json_data is not None else None
     method = method or ('POST' if data else 'GET')
 
     while True:
@@ -121,7 +121,7 @@ class GristDocAPI(object):
     query = ''
     if filters:
       query = '?filter=' + quote_plus(json.dumps(
-        {k: [to_grist(v)] for k, v in viewitems(filters)}))
+        {k: [to_grist(v)] for k, v in viewitems(filters)}, sort_keys=True))
 
     columns = self.call('tables/%s/data%s' % (table_name, query))
     # convert columns to rows

@@ -29,7 +29,7 @@ from vcr import VCR
 from grist_api import GristDocAPI, date_to_ts
 
 SERVER = "http://localhost:8080/o/docs-8"
-DOC_ID = "bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15"
+DOC_ID = "28a446f2-903e-4bd4-8001-1dbd3a68e5a5"
 LIVE = bool(os.environ.get("VCR_RECORD", None))
 
 logging.basicConfig(format='%(asctime)s %(levelname)s %(name)s %(message)s')
