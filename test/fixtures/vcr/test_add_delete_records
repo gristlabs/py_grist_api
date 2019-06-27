@@ -1,43 +1,43 @@
 interactions:
 - request:
-    body: !!python/unicode '{"ColorRef": [3, null], "Date": [1547683200.0, null],
-      "Num": [2, 2], "Text_Field": ["Eggs", "Beets"]}'
+    body: '{"Num": [2, 2], "Date": [1547683200.0, null], "ColorRef": [3, null], "Text_Field":
+      ["Eggs", "Beets"]}'
     headers:
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip, deflate
       Connection:
-      - close
+      - keep-alive
       Content-Length:
       - '101'
       Content-Type:
       - application/json
-      Host:
-      - !!python/unicode 'localhost:8080'
       User-Agent:
-      - Python-urllib/2.7
+      - python-requests/2.22.0
     method: POST
     uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
   response:
     body:
-      string: !!python/unicode '[5,6]'
+      string: '[5,6]'
     headers:
-      access-control-allow-credentials:
+      Access-Control-Allow-Credentials:
       - 'true'
-      access-control-allow-headers:
+      Access-Control-Allow-Headers:
       - Authorization, Content-Type
-      access-control-allow-methods:
+      Access-Control-Allow-Methods:
       - GET, PATCH, POST, DELETE, OPTIONS
-      connection:
-      - close
-      content-length:
+      Connection:
+      - keep-alive
+      Content-Length:
       - '5'
-      content-type:
+      Content-Type:
       - application/json; charset=utf-8
-      date:
-      - Thu, 27 Jun 2019 19:30:52 GMT
-      etag:
+      Date:
+      - Thu, 27 Jun 2019 21:16:45 GMT
+      ETag:
       - W/"5-3jQgRQkkJsayENfC5SHCYuZ0SAc"
-      x-powered-by:
+      X-Powered-By:
       - Express
     status:
       code: 200
@@ -47,79 +47,79 @@ interactions:
     headers:
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip, deflate
       Connection:
-      - close
+      - keep-alive
       Content-Type:
       - application/json
-      Host:
-      - !!python/unicode 'localhost:8080'
       User-Agent:
-      - Python-urllib/2.7
+      - python-requests/2.22.0
     method: GET
     uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data?filter=%7B%22Num%22%3A+%5B2%5D%7D
   response:
     body:
-      string: !!python/unicode '{"id":[5,6],"manualSort":[5,6],"ColorRef":[3,0],"gristHelper_Display2":["Green",""],"Num":[2,2],"Text_Field":["Eggs","Beets"],"Date":[1547683200,null],"ColorRef_Value":["GREEN",null]}'
+      string: '{"id":[5,6],"manualSort":[5,6],"ColorRef":[3,0],"gristHelper_Display2":["Green",""],"Num":[2,2],"Text_Field":["Eggs","Beets"],"Date":[1547683200,null],"ColorRef_Value":["GREEN",null]}'
     headers:
-      access-control-allow-credentials:
+      Access-Control-Allow-Credentials:
       - 'true'
-      access-control-allow-headers:
+      Access-Control-Allow-Headers:
       - Authorization, Content-Type
-      access-control-allow-methods:
+      Access-Control-Allow-Methods:
       - GET, PATCH, POST, DELETE, OPTIONS
-      connection:
-      - close
-      content-length:
+      Connection:
+      - keep-alive
+      Content-Length:
       - '183'
-      content-type:
+      Content-Type:
       - application/json; charset=utf-8
-      date:
-      - Thu, 27 Jun 2019 19:30:52 GMT
-      etag:
+      Date:
+      - Thu, 27 Jun 2019 21:16:45 GMT
+      ETag:
       - W/"b7-BC640K419qGLbvvPwSqUy2f4Aj8"
-      x-powered-by:
+      X-Powered-By:
       - Express
     status:
       code: 200
       message: OK
 - request:
-    body: !!python/unicode '[["BulkRemoveRecord", "Table1", [5, 6]]]'
+    body: '[["BulkRemoveRecord", "Table1", [5, 6]]]'
     headers:
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip, deflate
       Connection:
-      - close
+      - keep-alive
       Content-Length:
       - '40'
       Content-Type:
       - application/json
-      Host:
-      - !!python/unicode 'localhost:8080'
       User-Agent:
-      - Python-urllib/2.7
+      - python-requests/2.22.0
     method: POST
     uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/apply
   response:
     body:
-      string: !!python/unicode '{"actionNum":348,"retValues":[null]}'
+      string: '{"actionNum":558,"retValues":[null]}'
     headers:
-      access-control-allow-credentials:
+      Access-Control-Allow-Credentials:
       - 'true'
-      access-control-allow-headers:
+      Access-Control-Allow-Headers:
       - Authorization, Content-Type
-      access-control-allow-methods:
+      Access-Control-Allow-Methods:
       - GET, PATCH, POST, DELETE, OPTIONS
-      connection:
-      - close
-      content-length:
+      Connection:
+      - keep-alive
+      Content-Length:
       - '36'
-      content-type:
+      Content-Type:
       - application/json; charset=utf-8
-      date:
-      - Thu, 27 Jun 2019 19:30:52 GMT
-      etag:
-      - W/"24-JwW7ZTXlW7YJGuqPfTCDKRaRhWM"
-      x-powered-by:
+      Date:
+      - Thu, 27 Jun 2019 21:16:45 GMT
+      ETag:
+      - W/"24-asDSGW2S9HF0GYfD3GJC0FPw8hM"
+      X-Powered-By:
       - Express
     status:
       code: 200
@@ -129,37 +129,37 @@ interactions:
     headers:
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip, deflate
       Connection:
-      - close
+      - keep-alive
       Content-Type:
       - application/json
-      Host:
-      - !!python/unicode 'localhost:8080'
       User-Agent:
-      - Python-urllib/2.7
+      - python-requests/2.22.0
     method: GET
     uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data?filter=%7B%22Num%22%3A+%5B2%5D%7D
   response:
     body:
-      string: !!python/unicode '{"id":[],"manualSort":[],"ColorRef":[],"gristHelper_Display2":[],"Num":[],"Text_Field":[],"Date":[],"ColorRef_Value":[]}'
+      string: '{"id":[],"manualSort":[],"ColorRef":[],"gristHelper_Display2":[],"Num":[],"Text_Field":[],"Date":[],"ColorRef_Value":[]}'
     headers:
-      access-control-allow-credentials:
+      Access-Control-Allow-Credentials:
       - 'true'
-      access-control-allow-headers:
+      Access-Control-Allow-Headers:
       - Authorization, Content-Type
-      access-control-allow-methods:
+      Access-Control-Allow-Methods:
       - GET, PATCH, POST, DELETE, OPTIONS
-      connection:
-      - close
-      content-length:
+      Connection:
+      - keep-alive
+      Content-Length:
       - '120'
-      content-type:
+      Content-Type:
       - application/json; charset=utf-8
-      date:
-      - Thu, 27 Jun 2019 19:30:52 GMT
-      etag:
+      Date:
+      - Thu, 27 Jun 2019 21:16:46 GMT
+      ETag:
       - W/"78-p/QE8hK4ZY3tR437eq99uPyT8U0"
-      x-powered-by:
+      X-Powered-By:
       - Express
     status:
       code: 200

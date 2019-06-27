@@ -10,6 +10,8 @@ function exported by this module.
 
 # pylint: disable=wrong-import-position,wrong-import-order,import-error
 from future import standard_library
+from future.builtins import range
+from future.utils import viewitems
 standard_library.install_aliases()
 
 import datetime
@@ -18,15 +20,12 @@ import itertools
 import json
 import logging
 import os
+import requests
 import sys
 import time
 from collections import namedtuple
-from future.builtins import range
-from future.utils import viewitems
 from numbers import Number
 from urllib.parse import quote_plus
-from urllib.request import urlopen, Request
-from urllib.error import HTTPError
 
 # Set environment variable GRIST_LOGLEVEL=DEBUG for more verbosity, WARNING for less.
 log = logging.getLogger('grist_api')
@@ -76,42 +75,35 @@ class GristDocAPI(object):
     if prefix is None:
       prefix = '/api/docs/%s/' % self._doc_id
     data = json.dumps(json_data).encode('utf8') if json_data is not None else None
-    req = Request(self._server + prefix + url, data=data, headers={
-      'Authorization': 'Bearer %s' % self._api_key,
-      'Content-Type': 'application/json',
-      'Accept': 'application/json',
-    })
-    # Overriding method is a bit ugly with urllib2. See
-    # https://stackoverflow.com/questions/4511598/how-to-make-http-delete-method-using-urllib2
-    if method is not None:
-      req.get_method = lambda: method
+    method = method or ('POST' if data else 'GET')
 
     while True:
-      try:
-        dest = self._server + prefix + url
-        if self._dryrun and req.get_method() != 'GET':
-          log.info("DRYRUN NOT sending %s request to %s", req.get_method(), dest)
-          return None
-        log.debug("sending %s request to %s", req.get_method(), dest)
-        resp = urlopen(req)
-        break
-      except HTTPError as err:
+      full_url = self._server + prefix + url
+      if self._dryrun and method != 'GET':
+        log.info("DRYRUN NOT sending %s request to %s", method, full_url)
+        return None
+      log.debug("sending %s request to %s", method, full_url)
+      resp = requests.request(method, full_url, data=data, headers={
+        'Authorization': 'Bearer %s' % self._api_key,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      })
+      if not resp.ok:
         # If the error has {"error": ...} content, use the message in the Python exception.
         try:
-          error_obj = json.loads(err.read())
+          error_obj = resp.json()
           if error_obj and isinstance(error_obj.get("error"), basestring):
-            err.msg = error_obj.get("error")
+            err_msg = error_obj.get("error")
             # TODO: This is a temporary workaround: SQLITE_BUSY shows up in messages for a
             # temporary problem for which it's safe to retry.
-            if 'SQLITE_BUSY' in err.msg:
-              log.warn("Retrying after error: %s", err.msg)
+            if 'SQLITE_BUSY' in err_msg:
+              log.warn("Retrying after error: %s", err_msg)
               time.sleep(2)
               continue
         except Exception:   # pylint: disable=broad-except
           pass
-        raise err
-
-    return json.loads(resp.read())
+        raise resp.raise_for_status()
+      return resp.json()
 
   def fetch_table(self, table_name, filters=None):
     """

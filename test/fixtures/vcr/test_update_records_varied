@@ -4,121 +4,121 @@ interactions:
     headers:
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip, deflate
       Connection:
-      - close
+      - keep-alive
       Content-Type:
       - application/json
-      Host:
-      - !!python/unicode 'localhost:8080'
       User-Agent:
-      - Python-urllib/2.7
+      - python-requests/2.22.0
     method: GET
     uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
   response:
     body:
-      string: !!python/unicode '{"id":[1,2,3,4],"manualSort":[1,2,3,4],"ColorRef":[1,2,3,1],"gristHelper_Display2":["Red","Orange","Green","Red"],"Num":[5,8,12,1.5],"Text_Field":["Apple","Orange","Melon","Strawberry"],"Date":[1561507200,1556668800,1554163200,1551571200],"ColorRef_Value":["RED","ORANGE","GREEN","RED"]}'
+      string: '{"id":[1,2,3,4],"manualSort":[1,2,3,4],"ColorRef":[1,2,3,1],"gristHelper_Display2":["Red","Orange","Green","Red"],"Num":[5,8,12,1.5],"Text_Field":["Apple","Orange","Melon","Strawberry"],"Date":[1561507200,1556668800,1554163200,1551571200],"ColorRef_Value":["RED","ORANGE","GREEN","RED"]}'
     headers:
-      access-control-allow-credentials:
+      Access-Control-Allow-Credentials:
       - 'true'
-      access-control-allow-headers:
+      Access-Control-Allow-Headers:
       - Authorization, Content-Type
-      access-control-allow-methods:
+      Access-Control-Allow-Methods:
       - GET, PATCH, POST, DELETE, OPTIONS
-      connection:
-      - close
-      content-length:
+      Connection:
+      - keep-alive
+      Content-Length:
       - '287'
-      content-type:
+      Content-Type:
       - application/json; charset=utf-8
-      date:
-      - Thu, 27 Jun 2019 19:30:54 GMT
-      etag:
+      Date:
+      - Thu, 27 Jun 2019 21:16:47 GMT
+      ETag:
       - W/"11f-Yjmht0raG/ZIu/99QjYP0kXYrG4"
-      x-powered-by:
+      X-Powered-By:
       - Express
     status:
       code: 200
       message: OK
 - request:
-    body: !!python/unicode '{"ColorRef": [2], "Num": [-1.5], "id": [4]}'
+    body: '{"ColorRef": [2], "Num": [-1.5], "id": [4]}'
     headers:
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip, deflate
       Connection:
-      - close
+      - keep-alive
       Content-Length:
       - '43'
       Content-Type:
       - application/json
-      Host:
-      - !!python/unicode 'localhost:8080'
       User-Agent:
-      - Python-urllib/2.7
+      - python-requests/2.22.0
     method: PATCH
     uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
   response:
     body:
-      string: !!python/unicode 'null'
+      string: 'null'
     headers:
-      access-control-allow-credentials:
+      Access-Control-Allow-Credentials:
       - 'true'
-      access-control-allow-headers:
+      Access-Control-Allow-Headers:
       - Authorization, Content-Type
-      access-control-allow-methods:
+      Access-Control-Allow-Methods:
       - GET, PATCH, POST, DELETE, OPTIONS
-      connection:
-      - close
-      content-length:
+      Connection:
+      - keep-alive
+      Content-Length:
       - '4'
-      content-type:
+      Content-Type:
       - application/json; charset=utf-8
-      date:
-      - Thu, 27 Jun 2019 19:30:54 GMT
-      etag:
+      Date:
+      - Thu, 27 Jun 2019 21:16:47 GMT
+      ETag:
       - W/"4-K+iMpCQsduglOsYkdIUQZQMtaDM"
-      x-powered-by:
+      X-Powered-By:
       - Express
     status:
       code: 200
       message: OK
 - request:
-    body: !!python/unicode '{"Num": [-5], "id": [1], "Text_Field": ["snapple"]}'
+    body: '{"Num": [-5], "Text_Field": ["snapple"], "id": [1]}'
     headers:
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip, deflate
       Connection:
-      - close
+      - keep-alive
       Content-Length:
       - '51'
       Content-Type:
       - application/json
-      Host:
-      - !!python/unicode 'localhost:8080'
       User-Agent:
-      - Python-urllib/2.7
+      - python-requests/2.22.0
     method: PATCH
     uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
   response:
     body:
-      string: !!python/unicode 'null'
+      string: 'null'
     headers:
-      access-control-allow-credentials:
+      Access-Control-Allow-Credentials:
       - 'true'
-      access-control-allow-headers:
+      Access-Control-Allow-Headers:
       - Authorization, Content-Type
-      access-control-allow-methods:
+      Access-Control-Allow-Methods:
       - GET, PATCH, POST, DELETE, OPTIONS
-      connection:
-      - close
-      content-length:
+      Connection:
+      - keep-alive
+      Content-Length:
       - '4'
-      content-type:
+      Content-Type:
       - application/json; charset=utf-8
-      date:
-      - Thu, 27 Jun 2019 19:30:54 GMT
-      etag:
+      Date:
+      - Thu, 27 Jun 2019 21:16:47 GMT
+      ETag:
       - W/"4-K+iMpCQsduglOsYkdIUQZQMtaDM"
-      x-powered-by:
+      X-Powered-By:
       - Express
     status:
       code: 200
@@ -128,121 +128,121 @@ interactions:
     headers:
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip, deflate
       Connection:
-      - close
+      - keep-alive
       Content-Type:
       - application/json
-      Host:
-      - !!python/unicode 'localhost:8080'
       User-Agent:
-      - Python-urllib/2.7
+      - python-requests/2.22.0
     method: GET
     uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
   response:
     body:
-      string: !!python/unicode '{"id":[1,2,3,4],"manualSort":[1,2,3,4],"ColorRef":[1,2,3,2],"gristHelper_Display2":["Red","Orange","Green","Orange"],"Num":[-5,8,12,-1.5],"Text_Field":["snapple","Orange","Melon","Strawberry"],"Date":[1561507200,1556668800,1554163200,1551571200],"ColorRef_Value":["RED","ORANGE","GREEN","ORANGE"]}'
+      string: '{"id":[1,2,3,4],"manualSort":[1,2,3,4],"ColorRef":[1,2,3,2],"gristHelper_Display2":["Red","Orange","Green","Orange"],"Num":[-5,8,12,-1.5],"Text_Field":["snapple","Orange","Melon","Strawberry"],"Date":[1561507200,1556668800,1554163200,1551571200],"ColorRef_Value":["RED","ORANGE","GREEN","ORANGE"]}'
     headers:
-      access-control-allow-credentials:
+      Access-Control-Allow-Credentials:
       - 'true'
-      access-control-allow-headers:
+      Access-Control-Allow-Headers:
       - Authorization, Content-Type
-      access-control-allow-methods:
+      Access-Control-Allow-Methods:
       - GET, PATCH, POST, DELETE, OPTIONS
-      connection:
-      - close
-      content-length:
+      Connection:
+      - keep-alive
+      Content-Length:
       - '297'
-      content-type:
+      Content-Type:
       - application/json; charset=utf-8
-      date:
-      - Thu, 27 Jun 2019 19:30:54 GMT
-      etag:
+      Date:
+      - Thu, 27 Jun 2019 21:16:47 GMT
+      ETag:
       - W/"129-QC3BH5rop+7ojnOcoluV+3KVl28"
-      x-powered-by:
+      X-Powered-By:
       - Express
     status:
       code: 200
       message: OK
 - request:
-    body: !!python/unicode '{"ColorRef": [1], "Num": [1.5], "id": [4]}'
+    body: '{"ColorRef": [1], "Num": [1.5], "id": [4]}'
     headers:
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip, deflate
       Connection:
-      - close
+      - keep-alive
       Content-Length:
       - '42'
       Content-Type:
       - application/json
-      Host:
-      - !!python/unicode 'localhost:8080'
       User-Agent:
-      - Python-urllib/2.7
+      - python-requests/2.22.0
     method: PATCH
     uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
   response:
     body:
-      string: !!python/unicode 'null'
+      string: 'null'
     headers:
-      access-control-allow-credentials:
+      Access-Control-Allow-Credentials:
       - 'true'
-      access-control-allow-headers:
+      Access-Control-Allow-Headers:
       - Authorization, Content-Type
-      access-control-allow-methods:
+      Access-Control-Allow-Methods:
       - GET, PATCH, POST, DELETE, OPTIONS
-      connection:
-      - close
-      content-length:
+      Connection:
+      - keep-alive
+      Content-Length:
       - '4'
-      content-type:
+      Content-Type:
       - application/json; charset=utf-8
-      date:
-      - Thu, 27 Jun 2019 19:30:54 GMT
-      etag:
+      Date:
+      - Thu, 27 Jun 2019 21:16:47 GMT
+      ETag:
       - W/"4-K+iMpCQsduglOsYkdIUQZQMtaDM"
-      x-powered-by:
+      X-Powered-By:
       - Express
     status:
       code: 200
       message: OK
 - request:
-    body: !!python/unicode '{"Num": [5], "id": [1], "Text_Field": ["Apple"]}'
+    body: '{"Num": [5], "Text_Field": ["Apple"], "id": [1]}'
     headers:
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip, deflate
       Connection:
-      - close
+      - keep-alive
       Content-Length:
       - '48'
       Content-Type:
       - application/json
-      Host:
-      - !!python/unicode 'localhost:8080'
       User-Agent:
-      - Python-urllib/2.7
+      - python-requests/2.22.0
     method: PATCH
     uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
   response:
     body:
-      string: !!python/unicode 'null'
+      string: 'null'
     headers:
-      access-control-allow-credentials:
+      Access-Control-Allow-Credentials:
       - 'true'
-      access-control-allow-headers:
+      Access-Control-Allow-Headers:
       - Authorization, Content-Type
-      access-control-allow-methods:
+      Access-Control-Allow-Methods:
       - GET, PATCH, POST, DELETE, OPTIONS
-      connection:
-      - close
-      content-length:
+      Connection:
+      - keep-alive
+      Content-Length:
       - '4'
-      content-type:
+      Content-Type:
       - application/json; charset=utf-8
-      date:
-      - Thu, 27 Jun 2019 19:30:54 GMT
-      etag:
+      Date:
+      - Thu, 27 Jun 2019 21:16:47 GMT
+      ETag:
       - W/"4-K+iMpCQsduglOsYkdIUQZQMtaDM"
-      x-powered-by:
+      X-Powered-By:
       - Express
     status:
       code: 200
@@ -252,37 +252,37 @@ interactions:
     headers:
       Accept:
       - application/json
+      Accept-Encoding:
+      - gzip, deflate
       Connection:
-      - close
+      - keep-alive
       Content-Type:
       - application/json
-      Host:
-      - !!python/unicode 'localhost:8080'
       User-Agent:
-      - Python-urllib/2.7
+      - python-requests/2.22.0
     method: GET
     uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
   response:
     body:
-      string: !!python/unicode '{"id":[1,2,3,4],"manualSort":[1,2,3,4],"ColorRef":[1,2,3,1],"gristHelper_Display2":["Red","Orange","Green","Red"],"Num":[5,8,12,1.5],"Text_Field":["Apple","Orange","Melon","Strawberry"],"Date":[1561507200,1556668800,1554163200,1551571200],"ColorRef_Value":["RED","ORANGE","GREEN","RED"]}'
+      string: '{"id":[1,2,3,4],"manualSort":[1,2,3,4],"ColorRef":[1,2,3,1],"gristHelper_Display2":["Red","Orange","Green","Red"],"Num":[5,8,12,1.5],"Text_Field":["Apple","Orange","Melon","Strawberry"],"Date":[1561507200,1556668800,1554163200,1551571200],"ColorRef_Value":["RED","ORANGE","GREEN","RED"]}'
     headers:
-      access-control-allow-credentials:
+      Access-Control-Allow-Credentials:
       - 'true'
-      access-control-allow-headers:
+      Access-Control-Allow-Headers:
       - Authorization, Content-Type
-      access-control-allow-methods:
+      Access-Control-Allow-Methods:
       - GET, PATCH, POST, DELETE, OPTIONS
-      connection:
-      - close
-      content-length:
+      Connection:
+      - keep-alive
+      Content-Length:
       - '287'
-      content-type:
+      Content-Type:
       - application/json; charset=utf-8
-      date:
-      - Thu, 27 Jun 2019 19:30:54 GMT
-      etag:
+      Date:
+      - Thu, 27 Jun 2019 21:16:47 GMT
+      ETag:
       - W/"11f-Yjmht0raG/ZIu/99QjYP0kXYrG4"
-      x-powered-by:
+      X-Powered-By:
       - Express
     status:
       code: 200
