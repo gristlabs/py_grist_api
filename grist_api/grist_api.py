@@ -29,13 +29,13 @@ def make_colspec(gcol, ncol, gtype=None):
   return ColSpec(gcol, ncol, gtype)
 
 
-def init_logging(logger):
-  if not logger.handlers:
+def init_logging():
+  if not log.handlers:
     handler = logging.StreamHandler(sys.stderr)
     handler.setFormatter(logging.Formatter(fmt='%(asctime)s %(levelname)s %(name)s %(message)s'))
-    logger.setLevel(os.environ.get("GRIST_LOGLEVEL", "INFO"))
-    logger.addHandler(handler)
-    logger.propagate = False
+    log.setLevel(os.environ.get("GRIST_LOGLEVEL", "INFO"))
+    log.addHandler(handler)
+    log.propagate = False
 
 def get_api_key():
   key = os.environ.get("GRIST_API_KEY")
@@ -57,7 +57,6 @@ class GristDocAPI(object):
     URL after /doc/), and optionally a server URL. If dryrun is true, will not make any changes to
     the doc. The API key, if omitted, is taken from GRIST_API_KEY env var, or ~/.grist-api-key file.
     """
-    init_logging(log)
     self._dryrun = dryrun
     self._server = server
     self._api_key = api_key or get_api_key()
@@ -150,6 +149,17 @@ class GristDocAPI(object):
       results.extend(self.call('tables/%s/data' % table_name, json_data=data) or [])
     return results
 
+  def delete_records(self, table_name, record_ids, chunk_size=None):
+    """
+    Deletes records from the given table. The data is a list of record IDs.
+    """
+    # There is an endpoint missing to delete records, but we can use the "apply" endpoint
+    # meanwhile.
+    for rec_ids in chunks(record_ids, max_size=chunk_size):
+      log.info("delete_records %s %s records", table_name, len(rec_ids))
+      data = [['BulkRemoveRecord', table_name, rec_ids]]
+      self.call('apply', json_data=data)
+
   def update_records(self, table_name, record_dicts, group_if_needed=False, chunk_size=None):
     """
     Update existing records in the given table. The data is a list of dictionaries, with keys
@@ -165,14 +175,14 @@ class GristDocAPI(object):
     for rec in record_dicts:
       groups.setdefault(tuple(sorted(rec.keys())), []).append(rec)
     if len(groups) > 1 and not group_if_needed:
-      raise Exception("GristDocAPI.update_records needs group_if_needed for varied sets of columns")
+      raise ValueError("update_records needs group_if_needed for varied sets of columns")
 
     call_data = []
     for columns, group_records in sorted(groups.items()):
       for records in chunks(group_records, max_size=chunk_size):
         col_values = {col: [to_grist(rec[col]) for rec in records] for col in columns}
         if 'id' not in col_values or None in col_values["id"]:
-          raise Exception("GristDocAPI.update_records requires 'id' key in each record")
+          raise ValueError("update_records requires 'id' key in each record")
         call_data.append(col_values)
 
     for data in call_data:

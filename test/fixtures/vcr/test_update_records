@@ -1,0 +1,168 @@
+interactions:
+- request:
+    body: !!python/unicode '{"ColorRef": [2, 2], "Num": [-5, -1.5], "id": [1, 4],
+      "Text_Field": ["snapple", null]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '86'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: PATCH
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode 'null'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '4'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:54 GMT
+      etag:
+      - W/"4-K+iMpCQsduglOsYkdIUQZQMtaDM"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: GET
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode '{"id":[1,2,3,4],"manualSort":[1,2,3,4],"ColorRef":[2,2,3,2],"gristHelper_Display2":["Orange","Orange","Green","Orange"],"Num":[-5,8,12,-1.5],"Text_Field":["snapple","Orange","Melon",null],"Date":[1561507200,1556668800,1554163200,1551571200],"ColorRef_Value":["ORANGE","ORANGE","GREEN","ORANGE"]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '295'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:54 GMT
+      etag:
+      - W/"127-e8X08KGFDG7Z2hvYdzzVLjCfERY"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '{"ColorRef": [1, 1], "Num": [5, 1.5], "id": [1, 4], "Text_Field":
+      ["Apple", "Strawberry"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '90'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: PATCH
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode 'null'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '4'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:54 GMT
+      etag:
+      - W/"4-K+iMpCQsduglOsYkdIUQZQMtaDM"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: GET
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode '{"id":[1,2,3,4],"manualSort":[1,2,3,4],"ColorRef":[1,2,3,1],"gristHelper_Display2":["Red","Orange","Green","Red"],"Num":[5,8,12,1.5],"Text_Field":["Apple","Orange","Melon","Strawberry"],"Date":[1561507200,1556668800,1554163200,1551571200],"ColorRef_Value":["RED","ORANGE","GREEN","RED"]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '287'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:54 GMT
+      etag:
+      - W/"11f-Yjmht0raG/ZIu/99QjYP0kXYrG4"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+version: 1

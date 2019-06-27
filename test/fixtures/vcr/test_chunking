@@ -1,0 +1,791 @@
+interactions:
+- request:
+    body: !!python/unicode '{"Num": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "Text_Field":
+      ["Chunk", "Chunk", "Chunk", "Chunk", "Chunk", "Chunk", "Chunk", "Chunk", "Chunk",
+      "Chunk", "Chunk", "Chunk"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '171'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: POST
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode '[5,6,7,8,9,10,11,12,13,14,15,16]'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '32'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"20-2RBtdM4Xoe128aJkTSAPZwSBUU8"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '{"Num": [12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23],
+      "Text_Field": ["Chunk", "Chunk", "Chunk", "Chunk", "Chunk", "Chunk", "Chunk",
+      "Chunk", "Chunk", "Chunk", "Chunk", "Chunk"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '181'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: POST
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode '[17,18,19,20,21,22,23,24,25,26,27,28]'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '37'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"25-XmiV9KikkplQhAoanlHBpdkbg0I"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '{"Num": [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35],
+      "Text_Field": ["Chunk", "Chunk", "Chunk", "Chunk", "Chunk", "Chunk", "Chunk",
+      "Chunk", "Chunk", "Chunk", "Chunk", "Chunk"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '181'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: POST
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode '[29,30,31,32,33,34,35,36,37,38,39,40]'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '37'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"25-mfbkUiqpc15psKrg0ODJ2LXgze8"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '{"Num": [36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47],
+      "Text_Field": ["Chunk", "Chunk", "Chunk", "Chunk", "Chunk", "Chunk", "Chunk",
+      "Chunk", "Chunk", "Chunk", "Chunk", "Chunk"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '181'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: POST
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode '[41,42,43,44,45,46,47,48,49,50,51,52]'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '37'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"25-AAK5swNgzauoNmhX9VQP5HUne1E"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '{"Num": [48, 49], "Text_Field": ["Chunk", "Chunk"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '51'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: POST
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode '[53,54]'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '7'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"7-6+7V+9tJA1LUdJm1bDo9dm/xrEs"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: GET
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode '{"id":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54],"manualSort":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54],"ColorRef":[1,2,3,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"gristHelper_Display2":["Red","Orange","Green","Red","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","","",""],"Num":[5,8,12,1.5,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49],"Text_Field":["Apple","Orange","Melon","Strawberry","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk","Chunk"],"Date":[1561507200,1556668800,1554163200,1551571200,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"ColorRef_Value":["RED","ORANGE","GREEN","RED",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '1867'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"74b-xShRIJ5mIr2E7QZnCYkXjiXUyDY"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '{"ColorRef": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "id":
+      [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], "Text_Field": ["Peanut Butter",
+      "Peanut Butter", "Peanut Butter", "Peanut Butter", "Peanut Butter", "Peanut
+      Butter", "Peanut Butter", "Peanut Butter", "Peanut Butter", "Peanut Butter",
+      "Peanut Butter", "Peanut Butter"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '321'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: PATCH
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode 'null'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '4'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"4-K+iMpCQsduglOsYkdIUQZQMtaDM"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '{"ColorRef": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "id":
+      [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28], "Text_Field": ["Peanut Butter",
+      "Peanut Butter", "Peanut Butter", "Peanut Butter", "Peanut Butter", "Peanut
+      Butter", "Peanut Butter", "Peanut Butter", "Peanut Butter", "Peanut Butter",
+      "Peanut Butter", "Peanut Butter"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '326'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: PATCH
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode 'null'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '4'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"4-K+iMpCQsduglOsYkdIUQZQMtaDM"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '{"ColorRef": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "id":
+      [29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40], "Text_Field": ["Peanut Butter",
+      "Peanut Butter", "Peanut Butter", "Peanut Butter", "Peanut Butter", "Peanut
+      Butter", "Peanut Butter", "Peanut Butter", "Peanut Butter", "Peanut Butter",
+      "Peanut Butter", "Peanut Butter"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '326'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: PATCH
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode 'null'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '4'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"4-K+iMpCQsduglOsYkdIUQZQMtaDM"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '{"ColorRef": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], "id":
+      [41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52], "Text_Field": ["Peanut Butter",
+      "Peanut Butter", "Peanut Butter", "Peanut Butter", "Peanut Butter", "Peanut
+      Butter", "Peanut Butter", "Peanut Butter", "Peanut Butter", "Peanut Butter",
+      "Peanut Butter", "Peanut Butter"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '326'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: PATCH
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode 'null'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '4'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"4-K+iMpCQsduglOsYkdIUQZQMtaDM"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '{"ColorRef": [2, 2], "id": [53, 54], "Text_Field": ["Peanut
+      Butter", "Peanut Butter"]}'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '86'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: PATCH
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode 'null'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '4'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"4-K+iMpCQsduglOsYkdIUQZQMtaDM"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: GET
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode '{"id":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54],"manualSort":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54],"ColorRef":[1,2,3,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],"gristHelper_Display2":["Red","Orange","Green","Red","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange","Orange"],"Num":[5,8,12,1.5,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49],"Text_Field":["Apple","Orange","Melon","Strawberry","Peanut
+        Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut
+        Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut
+        Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut
+        Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut
+        Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut
+        Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut
+        Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut
+        Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut
+        Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut
+        Butter","Peanut Butter","Peanut Butter","Peanut Butter","Peanut Butter"],"Date":[1561507200,1556668800,1554163200,1551571200,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"ColorRef_Value":["RED","ORANGE","GREEN","RED","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE","ORANGE"]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '2767'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"acf-SLplyQ/dK3CLwKZ2Cdh6v+WcTQ4"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '[["BulkRemoveRecord", "Table1", [5, 6, 7, 8, 9, 10, 11,
+      12, 13, 14, 15, 16]]]'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '77'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: POST
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/apply
+  response:
+    body:
+      string: !!python/unicode '{"actionNum":359,"retValues":[null]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '36'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"24-cbHNUN+b01ZCr1FM5nDuvZPq3fg"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '[["BulkRemoveRecord", "Table1", [17, 18, 19, 20, 21, 22,
+      23, 24, 25, 26, 27, 28]]]'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '82'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: POST
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/apply
+  response:
+    body:
+      string: !!python/unicode '{"actionNum":360,"retValues":[null]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '36'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"24-8BOwyTiJCU8H9Kw28uO29Ixp+rs"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '[["BulkRemoveRecord", "Table1", [29, 30, 31, 32, 33, 34,
+      35, 36, 37, 38, 39, 40]]]'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '82'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: POST
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/apply
+  response:
+    body:
+      string: !!python/unicode '{"actionNum":361,"retValues":[null]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '36'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"24-7U0Pgqyxl6IWxcNqfUxPGVx+o4w"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '[["BulkRemoveRecord", "Table1", [41, 42, 43, 44, 45, 46,
+      47, 48, 49, 50, 51, 52]]]'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '82'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: POST
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/apply
+  response:
+    body:
+      string: !!python/unicode '{"actionNum":362,"retValues":[null]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '36'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"24-TdT6Cl/iR/3SpKCDMr+it3rwnL0"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: !!python/unicode '[["BulkRemoveRecord", "Table1", [53, 54]]]'
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Length:
+      - '42'
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: POST
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/apply
+  response:
+    body:
+      string: !!python/unicode '{"actionNum":363,"retValues":[null]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '36'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"24-CVrRg6hFAHiGtZOmXwERxTLh9kw"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Content-Type:
+      - application/json
+      Host:
+      - !!python/unicode 'localhost:8080'
+      User-Agent:
+      - Python-urllib/2.7
+    method: GET
+    uri: http://localhost:8080/o/docs-8/api/docs/bac4fbc2-4a5d-442d-bdfb-b1aa4e306f15/tables/Table1/data
+  response:
+    body:
+      string: !!python/unicode '{"id":[1,2,3,4],"manualSort":[1,2,3,4],"ColorRef":[1,2,3,1],"gristHelper_Display2":["Red","Orange","Green","Red"],"Num":[5,8,12,1.5],"Text_Field":["Apple","Orange","Melon","Strawberry"],"Date":[1561507200,1556668800,1554163200,1551571200],"ColorRef_Value":["RED","ORANGE","GREEN","RED"]}'
+    headers:
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization, Content-Type
+      access-control-allow-methods:
+      - GET, PATCH, POST, DELETE, OPTIONS
+      connection:
+      - close
+      content-length:
+      - '287'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 27 Jun 2019 19:30:53 GMT
+      etag:
+      - W/"11f-Yjmht0raG/ZIu/99QjYP0kXYrG4"
+      x-powered-by:
+      - Express
+    status:
+      code: 200
+      message: OK
+version: 1
