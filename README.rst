@@ -26,7 +26,30 @@ The API Reference is here: http://py_grist_api.readthedocs.io/en/latest/api-inde
 
 Usage
 -----
-TO BE DOCUMENTED.
+
+See `tests/test_grist_api.py` for usage examples.  A simple script to add
+some rows to a table and then fetch all cells in the table could look like:
+
+.. code-block:: python
+
+    from grist_api import GristDocAPI
+    import os
+
+    SERVER = "https://subdomain.getgrist.com"         # your org goes here
+    DOC_ID = "9dc7e414-2761-4ef2-bc28-310e634754fb"   #  document id goes here
+
+    # Get api key from your Profile Settings
+    api = GristDocAPI(DOC_ID, server=SERVER, api_key=os.environ['GRIST_API_KEY'])
+
+    # add some rows to a table
+    rows = api.add_records('Table1', [
+        {'food': 'eggs'},
+        {'food': 'beets'}
+    ])
+
+    # fetch all the rows
+    data = api.fetch_table('Table1')
+    print(data)
 
 
 Tests
