@@ -12,7 +12,7 @@ grist_api
 
 .. Start of user-guide
 
-The `grist_api` is a Python client for interacting with Grist.
+The ``grist_api`` is a Python client for interacting with Grist.
 
 Installation
 ------------
@@ -27,7 +27,7 @@ The API Reference is here: http://py_grist_api.readthedocs.io/en/latest/api-inde
 Usage
 -----
 
-See `tests/test_grist_api.py` for usage examples.  A simple script to add
+See ``tests/test_grist_api.py`` for usage examples.  A simple script to add
 some rows to a table and then fetch all cells in the table could look like:
 
 .. code-block:: python
