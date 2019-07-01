@@ -38,8 +38,8 @@ some rows to a table and then fetch all cells in the table could look like:
     SERVER = "https://subdomain.getgrist.com"         # your org goes here
     DOC_ID = "9dc7e414-2761-4ef2-bc28-310e634754fb"   #  document id goes here
 
-    # Get api key from your Profile Settings
-    api = GristDocAPI(DOC_ID, server=SERVER, api_key=os.environ['GRIST_API_KEY'])
+    # Get api key from your Profile Settings, and run with GRIST_API_KEY=<key>
+    api = GristDocAPI(DOC_ID, server=SERVER)
 
     # add some rows to a table
     rows = api.add_records('Table1', [
