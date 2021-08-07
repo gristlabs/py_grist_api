@@ -12,7 +12,7 @@ grist_api
 
 .. Start of user-guide
 
-The ``grist_api`` is a Python client for interacting with Grist.
+The ``grist_api`` module is a Python client library for interacting with Grist.
 
 Installation
 ------------

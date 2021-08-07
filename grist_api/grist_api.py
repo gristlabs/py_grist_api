@@ -30,11 +30,6 @@ from urllib.parse import quote_plus
 # Set environment variable GRIST_LOGLEVEL=DEBUG for more verbosity, WARNING for less.
 log = logging.getLogger('grist_api')
 
-ColSpec = namedtuple('ColSpec', ('gcol', 'ncol', 'gtype'))
-def make_colspec(gcol, ncol, gtype=None):
-  return ColSpec(gcol, ncol, gtype)
-
-
 def init_logging():
   if not log.handlers:
     handler = logging.StreamHandler(sys.stderr)
@@ -271,28 +266,47 @@ class GristDocAPI(object):
     self.update_records(table_id, update_list, group_if_needed=True, chunk_size=chunk_size)
     self.add_records(table_id, add_list, chunk_size=chunk_size)
 
+class ColSpec(namedtuple('ColSpec', ('gcol', 'ncol', 'gtype'))):
+  """
+  Column specifier for syncing data. Each column is represented by the tuple
+  `(grist_col_id, new_data_col_id[, grist_type])`.
+  """
+  pass
+
+def make_colspec(gcol, ncol, gtype=None):
+  return ColSpec(gcol, ncol, gtype)
+
+
 
 EPOCH = datetime.datetime(1970, 1, 1)
 DATE_EPOCH = EPOCH.date()
 
-# Converts timestamp in seconds to a naive datetime representing UTC.
 def ts_to_dt(timestamp):
+  """
+  Converts a numerical timestamp in seconds to a naive datetime.datetime object representing UTC.
+  """
   return EPOCH + datetime.timedelta(seconds=timestamp)
 
-# Converts datetime to timestamp in seconds.
-# Defaults to UTC if dtime is unaware (has no associated timezone).
 def dt_to_ts(dtime):
+  """
+  Converts a datetime.datetime object to a numerical timestamp in seconds.
+  Defaults to UTC if dtime is unaware (has no associated timezone).
+  """
   offset = dtime.utcoffset()
   if offset is None:
     offset = datetime.timedelta(0)
   return (dtime.replace(tzinfo=None) - offset - EPOCH).total_seconds()
 
-# Converts date to timestamp of the UTC midnight in seconds.
 def date_to_ts(date):
+  """
+  Converts a datetime.date object to a numerical timestamp of the UTC midnight in seconds.
+  """
   return (date - DATE_EPOCH).total_seconds()
 
-# Converts timestamp in seconds to date.
 def ts_to_date(timestamp):
+  """
+  Converts a numerical timestamp in seconds to a datetime.date object.
+  """
   return DATE_EPOCH + datetime.timedelta(seconds=timestamp)
 
 def to_grist(value):
@@ -308,10 +322,11 @@ def make_type(value, grist_type):
   """
   Convert a value, whether from Grist or external, to a sensible type, determined by grist_type,
   which should correspond to the type of the column in Grist. Currently supported types are:
-    Numeric:  empty values default to 0.0
-    Text:     empty values default to ""
-    Date:     in Grist values are numerical timestamps; in Python, datetime.date.
-    DateTime: in Grist values are numerical timestamps; in Python, datetime.datetime.
+
+  - Numeric:  empty values default to 0.0
+  - Text:     empty values default to ""
+  - Date:     in Grist values are numerical timestamps; in Python, datetime.date.
+  - DateTime: in Grist values are numerical timestamps; in Python, datetime.datetime.
   """
   if grist_type in ('Text', None):
     return '' if value is None else value

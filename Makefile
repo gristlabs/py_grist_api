@@ -9,11 +9,10 @@ publish:
 	@echo "Run this manually: twine upload dist/grist_api-`python setup.py --version`*"
 
 docs:
-	@echo Build documentation in docs/_build/html
-	source env/bin/activate ; PYTHONPATH=$(abspath .) $(MAKE) -C docs html
+	@echo "Build documentation in docs/build/html using virtualenv in ./env (override with \$$ENV)"
+	$${ENV:-env}/bin/sphinx-build -b html docs/source/ docs/build/html
 
 clean:
 	python setup.py clean
-	source env/bin/activate ; PYTHONPATH=$(abspath .) $(MAKE) -C docs clean
 
 .PHONY: dist publish docs clean
