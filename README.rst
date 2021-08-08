@@ -8,7 +8,7 @@ grist_api
 .. image:: https://travis-ci.org/gristlabs/py_grist_api.svg?branch=master
     :target: https://travis-ci.org/gristlabs/py_grist_api
 .. image:: https://readthedocs.org/projects/py_grist_api/badge/?version=latest
-    :target: http://py_grist_api.readthedocs.io/en/latest/index.html
+    :target: https://py-grist-api.readthedocs.io/en/latest/index.html
 
 .. Start of user-guide
 
@@ -22,7 +22,7 @@ grist_api is available on PyPI: https://pypi.python.org/pypi/grist_api/::
 
 The code is on GitHub: https://github.com/gristlabs/py_grist_api.
 
-The API Reference is here: http://py_grist_api.readthedocs.io/en/latest/api-index.html.
+The API Reference is here: https://py-grist-api.readthedocs.io/en/latest/grist_api.html.
 
 Usage
 -----
