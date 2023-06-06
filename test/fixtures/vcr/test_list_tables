@@ -1,0 +1,53 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      User-Agent:
+      - python-requests/2.31.0
+    method: GET
+    uri: http://localhost:8080/api/docs/mqpaKNo1B3Ag/tables
+  response:
+    body:
+      string: '{"tables":[{"id":"Table1","fields":{"primaryViewId":1,"summarySourceTable":0,"onDemand":false,"rawViewSectionRef":2,"tableRef":1}}]}'
+    headers:
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Headers:
+      - Authorization, Content-Type, X-Requested-With
+      Access-Control-Allow-Methods:
+      - GET, PATCH, PUT, POST, DELETE, OPTIONS
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Content-Language:
+      - en
+      Content-Length:
+      - '132'
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Tue, 06 Jun 2023 07:16:41 GMT
+      ETag:
+      - W/"84-e37GeRL+Yq1h+OANyMhvBg0Mrgg"
+      Server:
+      - nginx/1.18.0
+      Set-Cookie:
+      - grist_core=s%3Ag-6dB3Fsko5ViRFMypswi3Aj.7FM6ForjG03mVrkpe60ShKCQpmFH5aoHMmZwgyBR1sM;
+        Path=/; HttpOnly; SameSite=Lax
+      Strict-Transport-Security:
+      - max-age=15552000;
+      X-Powered-By:
+      - Express
+    status:
+      code: 200
+      message: OK
+version: 1
