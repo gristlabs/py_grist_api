@@ -66,6 +66,22 @@ class TestGristDocAPI(unittest.TestCase):
     self.assertEqual(actual, expected)
 
   @vcr.use_cassette()
+  def test_list_tables(self):
+      tables_result = self._grist_api.tables()
+
+      assert 'tables' in tables_result
+      tables = tables_result['tables']
+      assert isinstance(tables, list)
+
+  @vcr.use_cassette()
+  def test_columns(self):
+      columns_result = self._grist_api.columns("Table1")
+
+      assert 'columns' in columns_result
+      columns = columns_result['columns']
+      assert isinstance(columns, list)
+
+  @vcr.use_cassette()
   def test_fetch_table(self):
     # Test the basic fetch_table
     data = self._grist_api.fetch_table('Table1')
