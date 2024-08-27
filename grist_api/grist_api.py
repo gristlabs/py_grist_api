@@ -52,16 +52,26 @@ class GristDocAPI(object):
   """
   Class for interacting with a Grist document.
   """
-  def __init__(self, doc_id, api_key=None, server='https://api.getgrist.com', dryrun=False):
+  def __init__(self, doc_id, api_key=None, server='https://api.getgrist.com', dryrun=False, verify_ssl=True):
     """
     Initialize GristDocAPI with the API Key (available from user settings), DocId (the part of the
     URL after /doc/), and optionally a server URL. If dryrun is true, will not make any changes to
     the doc. The API key, if omitted, is taken from GRIST_API_KEY env var, or ~/.grist-api-key file.
+    
+    Parameters:
+    - doc_id (str): The document ID from Grist (the part of the URL after /doc/).
+    - api_key (str, optional): API key for authentication. If not provided, it will be read from
+      the environment variable GRIST_API_KEY or from the file ~/.grist-api-key.
+    - server (str, optional): Base URL of the Grist server. Defaults to 'https://api.getgrist.com'.
+    - dryrun (bool, optional): If True, no actual changes will be made to the document. Defaults to False.
+    - verify_ssl (bool, optional): If True (default), SSL certificates will be verified. Set to False
+      to disable SSL verification (use with caution).
     """
     self._dryrun = dryrun
     self._server = server
     self._api_key = api_key or get_api_key()
     self._doc_id = doc_id
+    self.verify_ssl = verify_ssl
 
   def call(self, url, json_data=None, method=None, prefix=None):
     """
@@ -82,7 +92,7 @@ class GristDocAPI(object):
         'Authorization': 'Bearer %s' % self._api_key,
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-      })
+      }, verify=self.verify_ssl)
       if not resp.ok:
         # If the error has {"error": ...} content, use the message in the Python exception.
         err_msg = None
