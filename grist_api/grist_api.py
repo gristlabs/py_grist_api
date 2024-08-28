@@ -71,7 +71,7 @@ class GristDocAPI(object):
     self._server = server
     self._api_key = api_key or get_api_key()
     self._doc_id = doc_id
-    self.verify_ssl = verify_ssl
+    self._verify_ssl = verify_ssl
 
   def call(self, url, json_data=None, method=None, prefix=None):
     """
@@ -92,7 +92,7 @@ class GristDocAPI(object):
         'Authorization': 'Bearer %s' % self._api_key,
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-      }, verify=self.verify_ssl)
+      }, verify=self._verify_ssl)
       if not resp.ok:
         # If the error has {"error": ...} content, use the message in the Python exception.
         err_msg = None
