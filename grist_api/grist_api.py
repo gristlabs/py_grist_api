@@ -64,8 +64,10 @@ class GristDocAPI(object):
       the environment variable GRIST_API_KEY or from the file ~/.grist-api-key.
     - server (str, optional): Base URL of the Grist server. Defaults to 'https://api.getgrist.com'.
     - dryrun (bool, optional): If True, no actual changes will be made to the document. Defaults to False.
-    - verify_ssl (bool, optional): If True (default), SSL certificates will be verified. Set to False
-      to disable SSL verification (use with caution).
+    - verify_ssl (bool, optional): If True (default), SSL certificates will be verified. 
+      Set to False to disable SSL verification (use with caution). This should only be used for local 
+      development or in a trusted environment, as disabling SSL verification on public servers poses a risk 
+      of Man-In-The-Middle (MITM) attacks. 
     """
     self._dryrun = dryrun
     self._server = server
