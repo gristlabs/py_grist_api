@@ -117,6 +117,18 @@ class GristDocAPI(object):
           raise resp.raise_for_status()
       return resp.json()
 
+  def tables(self):
+    """
+    List all tables in the document
+    """
+    return self.call('tables')
+
+  def columns(self, table_name):
+    """
+    Fetch columns for a table
+    """
+    return self.call('tables/%s/columns' % table_name)
+
   def fetch_table(self, table_name, filters=None):
     """
     Fetch all data in the table by the given name, returning a list of namedtuples with field
