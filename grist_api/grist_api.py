@@ -75,7 +75,7 @@ class GristDocAPI(object):
     self._doc_id = doc_id
     self._verify_ssl = verify_ssl
 
-  def call(self, url, json_data=None, method=None, prefix=None):
+  def _raw_call(self, url, json_data=None, method=None, prefix=None):
     """
     Low-level interface to make a REST call.
     """
@@ -115,7 +115,26 @@ class GristDocAPI(object):
           raise requests.HTTPError(err_msg, response=resp)
         else:
           raise resp.raise_for_status()
-      return resp.json()
+      return resp
+
+  def call(self, url, json_data=None, method=None, prefix=None):
+    """
+    Low-level interface that returns the _raw_call result as json
+    """
+    result = self._raw_call(url, json_data=json_data, method=method, prefix=prefix)
+    return result.json() if result else None
+
+  def attachement_metadata(self, id_attachment):
+    """
+    Get the metadata of an attachement in json (fileName, size…)
+    """
+    return self.call(f'attachments/%s' % id_attachment, method='GET')
+
+  def attachement(self, id_attachment):
+    """
+    Download the contents of an attachment in the return_value.content
+    """
+    return self._raw_call('attachments/%s/download' % id_attachment, method='GET')
 
   def tables(self):
     """
