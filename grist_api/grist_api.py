@@ -115,7 +115,7 @@ class GristDocAPI(object):
           raise requests.HTTPError(err_msg, response=resp)
         else:
           raise resp.raise_for_status()
-      return resp
+      return resp.json()
 
   def tables(self):
     """
@@ -142,7 +142,7 @@ class GristDocAPI(object):
       query = '?filter=' + quote_plus(json.dumps(
         {k: [to_grist(v)] for k, v in viewitems(filters)}, sort_keys=True))
 
-    columns = self.call('tables/%s/data%s' % (table_name, query)).json()
+    columns = self.call('tables/%s/data%s' % (table_name, query))
     # convert columns to rows
     Record = namedtuple(table_name, columns.keys())   # pylint: disable=invalid-name
     count = len(columns['id'])
@@ -169,7 +169,7 @@ class GristDocAPI(object):
     results = []
     for data in call_data:
       log.info("add_records %s %s", table_name, desc_col_values(data))
-      results.extend(self.call('tables/%s/data' % table_name, json_data=data).json() or [])
+      results.extend(self.call('tables/%s/data' % table_name, json_data=data) or [])
     return results
 
   def delete_records(self, table_name, record_ids, chunk_size=None):
