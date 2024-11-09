@@ -121,13 +121,15 @@ class GristDocAPI(object):
     """
     List all tables in the document
     """
-    return self.call('tables')
+    result = self.call('tables')
+    return None if result == None else result.json()
 
   def columns(self, table_name):
     """
     Fetch columns for a table
     """
-    return self.call('tables/%s/columns' % table_name)
+    result = self.call('tables/%s/columns' % table_name)
+    return None if result == None else result.json()
 
   def fetch_table(self, table_name, filters=None):
     """
