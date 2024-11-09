@@ -169,7 +169,8 @@ class GristDocAPI(object):
     results = []
     for data in call_data:
       log.info("add_records %s %s", table_name, desc_col_values(data))
-      results.extend(self.call('tables/%s/data' % table_name, json_data=data).json() or [])
+      result = self.call('tables/%s/data' % table_name, json_data=data)
+      results.extend(result.json() if result else [])
     return results
 
   def delete_records(self, table_name, record_ids, chunk_size=None):
