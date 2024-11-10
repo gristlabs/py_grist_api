@@ -126,13 +126,18 @@ class GristDocAPI(object):
 
   def attachement_metadata(self, id_attachment):
     """
-    Get the metadata of an attachement in json (fileName, size…)
+    Get the metadata of an attachement in json (fileName…)
+    see the api documentation for the full list of metadata:
+    https://support.getgrist.com/api/#tag/attachments/operation/getAttachmentMetadata
     """
     return self.call(f'attachments/%s' % id_attachment, method='GET')
 
   def attachement(self, id_attachment):
     """
     Download the contents of an attachment in the return_value.content
+
+    Response:
+        200: Attachment contents, with suitable Content-Type.
     """
     return self._raw_call('attachments/%s/download' % id_attachment, method='GET')
 
