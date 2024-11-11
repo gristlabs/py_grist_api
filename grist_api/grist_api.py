@@ -75,7 +75,7 @@ class GristDocAPI(object):
     self._doc_id = doc_id
     self._verify_ssl = verify_ssl
 
-  def call(self, url, json_data=None, method=None, prefix=None):
+  def _raw_call(self, url, json_data=None, method=None, prefix=None):
     """
     Low-level interface to make a REST call.
     """
@@ -117,6 +117,30 @@ class GristDocAPI(object):
           raise resp.raise_for_status()
       return resp
 
+  def call(self, url, json_data=None, method=None, prefix=None):
+    """
+    Low-level interface that returns the _raw_call result as json
+    """
+    result = self._raw_call(url, json_data=json_data, method=method, prefix=prefix)
+    return result.json() if result else None
+
+  def attachement_metadata(self, id_attachment):
+    """
+    Get the metadata of an attachement in json (fileName…)
+    see the api documentation for the full list of metadata:
+    https://support.getgrist.com/api/#tag/attachments/operation/getAttachmentMetadata
+    """
+    return self.call(f'attachments/%s' % id_attachment, method='GET')
+
+  def attachement(self, id_attachment):
+    """
+    Download the contents of an attachment in the return_value.content
+
+    Response:
+        200: Attachment contents, with suitable Content-Type.
+    """
+    return self._raw_call('attachments/%s/download' % id_attachment, method='GET')
+
   def tables(self):
     """
     List all tables in the document
@@ -142,7 +166,7 @@ class GristDocAPI(object):
       query = '?filter=' + quote_plus(json.dumps(
         {k: [to_grist(v)] for k, v in viewitems(filters)}, sort_keys=True))
 
-    columns = self.call('tables/%s/data%s' % (table_name, query)).json()
+    columns = self.call('tables/%s/data%s' % (table_name, query))
     # convert columns to rows
     Record = namedtuple(table_name, columns.keys())   # pylint: disable=invalid-name
     count = len(columns['id'])
@@ -169,7 +193,7 @@ class GristDocAPI(object):
     results = []
     for data in call_data:
       log.info("add_records %s %s", table_name, desc_col_values(data))
-      results.extend(self.call('tables/%s/data' % table_name, json_data=data).json() or [])
+      results.extend(self.call('tables/%s/data' % table_name, json_data=data) or [])
     return results
 
   def delete_records(self, table_name, record_ids, chunk_size=None):
